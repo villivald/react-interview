@@ -3,18 +3,19 @@ import "./App.css";
 import todos from "./constants/todos";
 import Task from "./components/task";
 import Bar from "./components/bar";
+import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
   const [name, setName] = useState("");
   const [list, setList] = useState(todos);
 
   const generateNewId = () => {
-    return list.length + 1;
+    return uuidv4();
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    let newTodos = list.slice();
+    let newTodos = [...list];
     newTodos.push({
       id: generateNewId(),
       name: name,
