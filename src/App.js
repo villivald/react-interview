@@ -44,11 +44,10 @@ const App = () => {
   };
 
   const todoItems = () => {
-    let retVal = [];
-
+    let todoList = [];
     for (let i = 0; i < list.length; i++) {
       let todo = list[i];
-      retVal.push(
+      todoList.push(
         <Task
           key={todo.id}
           todo={todo}
@@ -57,7 +56,7 @@ const App = () => {
         />
       );
     }
-    return retVal;
+    return todoList;
   };
 
   return (
