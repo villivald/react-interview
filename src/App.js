@@ -38,8 +38,8 @@ const App = () => {
   const onChange = (event) => setName(event.target.value);
 
   const onRemoveClick = (id) => {
-    //implement this logic
-    console.log("Remove Item!");
+    let newList = [...list];
+    setList(newList.filter((item) => item.id !== id));
   };
 
   const todoItems = () => {
