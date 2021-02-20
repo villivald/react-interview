@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 const Task = (props) => {
   return (
@@ -14,10 +15,23 @@ const Task = (props) => {
       >
         <p>{props.todo.name}</p>
       </div>
-      <button onClick={() => props.onClick(props.todo.id)}>
+      <Button
+        variant="contained"
+        color="primary"
+        style={{
+          backgroundColor: props.todo.complete === true ? "#777" : "",
+        }}
+        onClick={() => props.onClick(props.todo.id)}
+      >
         {props.todo.complete === true ? "Not done" : "Done"}
-      </button>
-      <button onClick={() => props.onRemoveClick(props.todo.id)}>Remove</button>
+      </Button>
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => props.onRemoveClick(props.todo.id)}
+      >
+        Remove
+      </Button>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import todos from "./constants/todos";
 import Task from "./components/task";
-import Bar from "./components/bar";
+import AddTodo from "./components/addtodo";
 import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
@@ -62,7 +62,11 @@ const App = () => {
   return (
     <div>
       {todoItems()}
-      <Bar onSubmit={onSubmit} newTodoName={name} onInputChange={onChange} />
+      <AddTodo
+        onSubmit={onSubmit}
+        newTodoName={name}
+        onInputChange={onChange}
+      />
     </div>
   );
 };
