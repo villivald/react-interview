@@ -1,16 +1,19 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 const AddTodo = (props) => {
   return (
     <form onSubmit={props.onSubmit}>
-      <input
-        placeholder="Add new todo..."
+      <TextField
+        id="standard-basic"
+        label="Add new todo..."
         value={props.newTodoName}
         onChange={props.onInputChange}
       />
-      <button className="btn-submit" type="submit" value="Submit">
+      <Button variant="contained" color="primary" type="submit" value="Submit">
         Submit
-      </button>
+      </Button>
     </form>
   );
 };

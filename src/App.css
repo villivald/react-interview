@@ -1,6 +1,6 @@
 body {
   margin: 40px auto;
-  max-width: 600px;
+  width: clamp(350px, 50%, 800px);
   line-height: 1.6;
   letter-spacing: 0.05em;
 }
@@ -15,6 +15,8 @@ p {
 .task-container {
   display: grid;
   grid-template-columns: 6fr 1.5fr 1.5fr;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
 .wrapper {
@@ -46,20 +48,30 @@ button:nth-child(3) {
   background-color: rgb(132, 223, 132);
   color: black;
 }
+form > button:nth-child(2) {
+  background-color: green;
+  height: 50px;
+}
+form > button:nth-child(2):hover {
+  background-color: rgb(60, 151, 60);
+}
 
 /*** SUBMIT FORM ***/
 
 form {
   display: grid;
   grid-template-columns: 6fr 3fr;
-  border: solid #ccc 1px;
   margin-top: 20px;
   border-radius: 5px;
   padding: 2px;
 }
-input {
-  border: none;
-  font-size: 1rem;
-  padding-left: 3%;
-  letter-spacing: 0.05em;
+
+.MuiInput-underline::before {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 97%;
 }
