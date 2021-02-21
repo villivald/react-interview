@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 const Task = (props) => {
   return (
@@ -15,6 +16,14 @@ const Task = (props) => {
       >
         <p>{props.todo.name}</p>
       </div>
+      <TextField
+        id="date"
+        label="Date"
+        type="date"
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
       <Button
         variant="contained"
         color="primary"
