@@ -7,9 +7,10 @@ const Task = (props) => {
     <div className="task-container">
       <div
         className="wrapper"
+        onClick={() => props.onClick(props.todo.id)}
         style={{
-          backgroundColor:
-            props.todo.complete === true ? "lightgreen" : "#56CBF9",
+          backgroundColor: props.todo.complete === true ? "#5c8d76" : "white",
+          backgroundImage: props.todo.complete === true ? "none" : "",
           textDecoration:
             props.todo.complete === true ? "line-through" : "none",
         }}
