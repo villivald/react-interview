@@ -99,7 +99,7 @@ button:nth-child(4) {
 form > button:nth-child(2) {
   background-color: var(--green);
   height: 50px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 form > button:nth-child(2):hover {
   background-color: var(--lightgreen);
